@@ -31,7 +31,7 @@ npm install
 
 3. Start MySQL container:
 ```bash
-docker run --name nestjs-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=nestdb -p 3306:3306 -d mysql:8.0 --default-authentication-plugin=mysql_native_password
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=nestdb -p 3306:3306 -d mysql:8.0 --default-authentication-plugin=mysql_native_password
 ```
 
 4. Start the application:
