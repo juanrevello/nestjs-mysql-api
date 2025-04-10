@@ -11,14 +11,15 @@ import { Post } from './posts/post.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: '127.0.0.1',
-      port: 3306,
-      username: 'root',
-      password: 'root',
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'postgres',
       database: 'nestdb',
       entities: [User, Profile, Post],
       synchronize: true,
+      logging: true,
     }),
     UsersModule,
     PostsModule,
